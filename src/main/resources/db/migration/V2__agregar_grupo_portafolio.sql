@@ -1,0 +1,1 @@
+ALTER TABLE portafolios ADD COLUMN IF NOT EXISTS grupo_id UUID;

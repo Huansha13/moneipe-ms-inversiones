@@ -20,6 +20,7 @@ public class PortafolioEntity implements Persistable<UUID> {
     private String nombre;
     private String descripcion;
     private String moneda;
+    private UUID grupoId;
     @CreatedDate
     private Instant createdAt;
     @LastModifiedDate
@@ -28,6 +29,8 @@ public class PortafolioEntity implements Persistable<UUID> {
     private UUID createdBy;
     @LastModifiedBy
     private UUID updatedBy;
+    private String estado;
+    private Instant deletedAt;
 
     @Transient
     private boolean nuevo = true;
@@ -47,6 +50,8 @@ public class PortafolioEntity implements Persistable<UUID> {
     public void setDescripcion(String descripcion) { this.descripcion = descripcion; }
     public String getMoneda() { return moneda; }
     public void setMoneda(String moneda) { this.moneda = moneda; }
+    public UUID getGrupoId() { return grupoId; }
+    public void setGrupoId(UUID grupoId) { this.grupoId = grupoId; }
     public Instant getCreatedAt() { return createdAt; }
     public void setCreatedAt(Instant createdAt) { this.createdAt = createdAt; }
     public Instant getUpdatedAt() { return updatedAt; }
@@ -55,4 +60,8 @@ public class PortafolioEntity implements Persistable<UUID> {
     public void setCreatedBy(UUID createdBy) { this.createdBy = createdBy; }
     public UUID getUpdatedBy() { return updatedBy; }
     public void setUpdatedBy(UUID updatedBy) { this.updatedBy = updatedBy; }
+    public String getEstado() { return estado; }
+    public void setEstado(String estado) { this.estado = estado; }
+    public Instant getDeletedAt() { return deletedAt; }
+    public void setDeletedAt(Instant deletedAt) { this.deletedAt = deletedAt; }
 }

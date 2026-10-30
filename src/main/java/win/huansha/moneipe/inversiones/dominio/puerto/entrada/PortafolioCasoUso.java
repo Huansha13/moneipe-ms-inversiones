@@ -8,7 +8,7 @@ import win.huansha.moneipe.inversiones.dominio.modelo.Portafolio;
 import java.util.UUID;
 
 public interface PortafolioCasoUso {
-    Mono<Portafolio> crear(UUID creadoPor, String nombre, String descripcion, String moneda);
+    Mono<Portafolio> crear(UUID creadoPor, String nombre, String descripcion, String moneda, UUID grupoId);
     Mono<Portafolio> porId(UUID id);
     Flux<Portafolio> listarMios(UUID usuarioId);
     Mono<Portafolio> actualizar(UUID id, String nombre, String descripcion);

@@ -21,12 +21,13 @@ public class PortafolioServicio implements PortafolioCasoUso {
     private final PortafolioRepositorio repo;
 
     @Override
-    public Mono<Portafolio> crear(UUID creadoPor, String nombre, String descripcion, String moneda) {
+    public Mono<Portafolio> crear(UUID creadoPor, String nombre, String descripcion, String moneda, UUID grupoId) {
         return Mono.just(Portafolio.builder()
             .id(UUID.randomUUID())
             .nombre(nombre)
             .descripcion(descripcion)
             .moneda(moneda != null ? moneda : "PEN")
+            .grupoId(grupoId)
             .createdBy(creadoPor)
             .updatedBy(creadoPor)
             .build())

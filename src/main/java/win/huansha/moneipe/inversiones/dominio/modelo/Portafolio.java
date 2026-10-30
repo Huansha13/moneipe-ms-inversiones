@@ -14,6 +14,7 @@ public class Portafolio {
     String nombre;
     String descripcion;
     String moneda;
+    UUID grupoId;
     Instant createdAt;
     Instant updatedAt;
     UUID createdBy;
